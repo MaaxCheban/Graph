@@ -1,6 +1,7 @@
 package com;
 
 import com.Graph.DijkstraAlgorithm;
+import com.Graph.Edge;
 import com.Graph.Graph;
 import com.Graph.Vertex;
 
@@ -18,11 +19,11 @@ public class Main {
         graph.addVertex(new Vertex<>("LA"));
         graph.addVertex(new Vertex<>("SFO"));
 
-        graph.addEdge(new Vertex<>("Bangalore"), new Vertex<>("Hong Kong"), 50);
-        graph.addEdge(new Vertex<>("Bangalore"), new Vertex<>("LA"), 70);
-        graph.addEdge(new Vertex<>("Bangalore"), new Vertex<>("SFO"), 100);
-        graph.addEdge(new Vertex<>("Hong Kong"), new Vertex<>("LA"), 60);
-        graph.addEdge(new Vertex<>("LA"), new Vertex<>("SFO"), 20);
+        graph.addEdge(new Edge(new Vertex<>("Bangalore"), new Vertex<>("Hong Kong"), 50));
+        graph.addEdge(new Edge(new Vertex<>("Bangalore"), new Vertex<>("LA"), 70));
+        graph.addEdge(new Edge(new Vertex<>("Bangalore"), new Vertex<>("SFO"), 100));
+        graph.addEdge(new Edge(new Vertex<>("Hong Kong"), new Vertex<>("LA"), 60));
+        graph.addEdge(new Edge(new Vertex<>("LA"), new Vertex<>("SFO"), 20));
 
         DijkstraAlgorithm<String> algorithm = new DijkstraAlgorithm<>(graph);
         List<Vertex<String>> vertexes;

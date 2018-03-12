@@ -48,8 +48,7 @@ public class Graph<V> {
         vertexes.remove(vertex);
     }
 
-    public void addEdge(Vertex<V> source, Vertex<V> dest, int weight){
-        Edge<V> edge = new Edge<>(source, dest, weight);
+    public void addEdge(Edge edge){
         edges.add(edge);
     }
 
